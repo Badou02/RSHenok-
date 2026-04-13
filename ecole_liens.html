@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INSTITUT HENOK - École de Formation Paramédicale</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: rgb(30, 58, 95);;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+  }
+  .page { width: 100%; max-width: 420px; margin: 0 auto; }
+ 
+  .top-decoration {
+    width: 80px; height: 4px;
+    background: linear-gradient(90deg, #e8c870, #f0a060);
+    border-radius: 2px;
+    margin: 0 auto 2rem;
+  }
+
+  /* ========== LOGO ========== */
+  .logo-area { text-align: center; margin-bottom: 2rem; }
+  .logo{
+    width: 88px; height: 88px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #e8c870 0%, #f0a060 100%);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 1.2rem;
+    font-family: 'Syne', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    color: #0a0a0f;
+    letter-spacing: -1px;
+    position: relative;
+  }
+  
+  .school-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 26px; font-weight: 800;
+    color: #f5f0e8; letter-spacing: -0.5px; line-height: 1.1;
+  }
+  .school-tagline {
+    font-size: 13px; color: rgba(245, 240, 232, 0.45);
+    margin-top: 6px; font-weight: 300;
+    letter-spacing: 0.5px; text-transform: uppercase;
+  }
+
+  /* ========== BOUTON SITE WEB ========== */
+  .website-btn {
+    display: flex; align-items: center; gap: 14px;
+    background: linear-gradient(135deg, #e8c870 0%, #f0a060 100%);
+    border-radius: 14px; padding: 16px 20px;
+    text-decoration: none; margin-bottom: 1rem;
+    transition: transform 0.2s, opacity 0.2s;
+  }
+  .website-btn:hover { transform: translateY(-2px); opacity: 0.92; }
+  .website-btn:active { transform: scale(0.98); }
+  .website-btn .btn-icon {
+    width: 40px; height: 40px;
+    background: rgba(10,10,15,0.2); border-radius: 10px;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .website-btn .btn-icon svg { width: 20px; height: 20px; }
+  .website-btn .btn-text { flex: 1; }
+  .website-btn .btn-label { font-size: 11px; color: rgba(10,10,15,0.6); text-transform: uppercase; letter-spacing: 0.8px; font-weight: 500; }
+  .website-btn .btn-url { font-size: 15px; color: #0a0a0f; font-weight: 600; font-family: 'Syne', sans-serif; }
+  .website-btn .arrow { font-size: 18px; color: rgba(10,10,15,0.5); }
+
+  /* ========== SÉPARATEUR ========== */
+  .divider { display: flex; align-items: center; gap: 12px; margin: 1.8rem 0; }
+  .divider-line { flex: 1; height: 1px; background: rgba(255,255,255,0.08); }
+  .divider-text { font-size: 11px; color: rgba(245,240,232,0.3); letter-spacing: 1px; text-transform: uppercase; }
+
+  /* ========== CARTES RÉSEAUX SOCIAUX ========== */
+  .social-grid { display: flex; flex-direction: column; gap: 10px; }
+  .social-card {
+    display: flex; align-items: center; gap: 14px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 14px; padding: 13px 18px;
+    text-decoration: none;
+    transition: background 0.2s, border-color 0.2s, transform 0.15s;
+  }
+  .social-card:hover {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.15);
+    transform: translateX(4px);
+  }
+  .social-card:active { transform: scale(0.98); }
+  .social-icon {
+    width: 42px; height: 42px; border-radius: 12px;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .social-icon svg { width: 22px; height: 22px; }
+  .social-info { flex: 1; }
+  .social-name { font-size: 14px; font-weight: 500; color: #f5f0e8; }
+  .social-handle { font-size: 12px; color: rgba(245,240,232,0.4); margin-top: 1px; }
+  .social-arrow { font-size: 14px; color: rgba(245,240,232,0.25); }
+
+  /* Couleurs des icônes */
+  .ig { background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+  .fb { background: #1877F2; }
+  .li { background: #0A66C2; }
+  .yt { background: #FF0000; }
+  .tt { background: #010101; border: 1px solid rgba(255,255,255,0.1); }
+  .tw { background: #000; border: 1px solid rgba(255,255,255,0.1); }
+  .wa { background: #25D366; }
+
+  /* ========== FOOTER ========== */
+  .footer {
+    text-align: center; margin-top: 2rem;
+    font-size: 11px; color: rgba(245,240,232,0.2); letter-spacing: 0.5px;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="top-decoration"></div>
+
+  <!-- ====== LOGO & NOM ====== -->
+  <div class="logo-area">
+    <div class="logo-circle"> <img class="logo" src="Logohenok.jpeg"> </div> 
+    <div class="school-name">INSTITUT HENOK École de Formation Paramédicale</div> 
+    <div class="school-tagline">« Plus Fort, Plus Haut, Plus Performant »</div> 
+  </div>
+
+  <!-- ====== SITE WEB ====== -->
+  <a href="https:/www.instituthenok.com" class="website-btn" target="_blank" rel="noopener">
+    <div class="btn-icon">
+      <svg fill="none" stroke="rgba(10,10,15,0.7)" stroke-width="2" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10"/>
+        <line x1="2" y1="12" x2="22" y2="12"/>
+        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+      </svg>
+    </div>
+    <div class="btn-text">
+      <div class="btn-label">Site officiel</div>
+      <div class="btn-url">www.instituthenok.com</div> <!-- Modifier l'URL -->
+    </div>
+    <div class="arrow">→</div>
+  </a>
+
+  <div class="divider">
+    <div class="divider-line"></div>
+    <div class="divider-text">Nos réseaux</div>
+    <div class="divider-line"></div>
+  </div>
+
+  <!-- ====== RÉSEAUX SOCIAUX ====== -->
+  <!-- Pour masquer un réseau : ajoutez style="display:none;" sur la carte -->
+  <div class="social-grid">
+
+    <!-- INSTAGRAM -->
+    <a href="https://www.instagram.com/instituthenok?igsh=ZHYxd3dkZXQ2Nzg=" class="social-card" target="_blank" rel="noopener">
+      <div class="social-icon ig">
+        <svg fill="white" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      </div>
+      <div class="social-info">
+        <div class="social-name">Instagram</div>
+        <div class="social-handle">@InstitutHenok</div> <!-- Modifier le handle -->
+      </div>
+      <div class="social-arrow">→</div>
+    </a>
+
+    <!-- FACEBOOK -->
+    <a href="https://www.facebook.com/share/1PjMFRB7aM/" class="social-card" target="_blank" rel="noopener">
+      <div class="social-icon fb">
+        <svg fill="white" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      </div>
+      <div class="social-info">
+        <div class="social-name">Facebook</div>
+        <div class="social-handle">@Institut Henok</div> <!-- Modifier -->
+      </div>
+      <div class="social-arrow">→</div>
+    </a>
+
+    <!-- LINKEDIN -->
+    <a href="https://www.linkedin.com/in/etienne-diafouna-7014a7402?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="social-card" target="_blank" rel="noopener">
+      <div class="social-icon li">
+        <svg fill="white" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </div>
+      <div class="social-info">
+        <div class="social-name">LinkedIn</div>
+        <div class="social-handle">@Institut Henok</div> <!-- Modifier -->
+      </div>
+      <div class="social-arrow">→</div>
+    </a>
+
+   
+
+    <!-- TIKTOK -->
+<a href="https://www.tiktok.com/@institut.henok.fo" class="social-card" target="_blank" rel="noopener">
+  <div class="social-icon tiktok">
+    <svg fill="white" viewBox="0 0 24 24">
+      <path d="M12 2v14.5a3.5 3.5 0 1 1-3-3.465V9.5a7 7 0 1 0 6 6.92V7.9a8.2 8.2 0 0 0 4.5 1.35V5.5a4.7 4.7 0 0 1-4.5-4.5H12z"/>
+    </svg>
+  </div>
+  <div class="social-info">
+    <div class="social-name">TikTok</div>
+    <div class="social-handle">@institut.henok.Formation</div>
+  </div>
+  <div class="social-arrow">→</div>
+</a>
+    <!-- WHATSAPP -->
+    <a href="https://wa.me/qr/EC435U5W4MHWH1" class="social-card" target="_blank" rel="noopener">
+      <div class="social-icon wa">
+        <svg fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+      </div>
+      <div class="social-info">
+        <div class="social-name">WhatsApp</div>
+        <div class="social-handle">+221 77 720 73 44</div> <!-- Modifier -->
+      </div>
+      <div class="social-arrow">→</div>
+    </a>
+
+  </div>
+
+  <div class="footer">© 2026 Institut Henok. Tous droits réservés.</div> <!-- Modifier -->
+
+</div>
+</body>
+</html>
